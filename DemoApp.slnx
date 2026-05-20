@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="DemoApp/DemoApp.csproj" />
+  <Project Path="MyCollectionLib/MyCollectionLib.csproj" Id="61755881-839b-4216-ba7b-6ece08ca83d3" />
+  <Project Path="MyCollections.Tests/MyCollections.Tests.csproj" Id="cea9f3e0-8750-4d10-9384-1f4b874e8c05" />
+  <Project Path="MyNewCollection/MyNewCollectionLib.csproj" Id="e4928115-c957-4d79-a76c-e6148cabffd2" />
+  <Project Path="QueryLib.Tests/QueryLib.Tests.csproj" Id="f93313e7-5db4-499d-8b05-b02ddebd5055" />
+  <Project Path="QueryLib/QueryLib.csproj" Id="380e4f26-3977-4ecf-9401-5029ea10adb6" />
+  <Project Path="WorkersLib.Tests/WorkersLib.Tests.csproj" />
+  <Project Path="WorkersLib/WorkersLib.csproj" />
+</Solution>
