@@ -50,7 +50,7 @@ namespace WorkersLib.Models
             Department = Console.ReadLine();
         }
 
-        public override object Clone()
+        public override Administration Clone()
         {
             return new Administration(this);
         }

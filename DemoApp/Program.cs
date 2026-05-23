@@ -53,9 +53,7 @@ class Program
 
     static void Task2()
     {
-        var list = new MyLinkedList<Person>();
         var dlist = new MyDoublyLinkedList<Person>();
-        InitList(list);
         InitDList(dlist);
 
         while (true)
@@ -73,12 +71,10 @@ class Program
             switch (operationNumber)
             {
                 case 1:
-                    PrintList(list);
                     PrintList(dlist);
                     break;
 
                 case 2:
-                    AddRandomPerson(list);
                     AddRandomPerson(dlist);
                     break;
 
@@ -111,28 +107,6 @@ class Program
             }
             Console.WriteLine("\n");
         }
-    }
-
-    static void InitList(MyLinkedList<Person> list)
-    {        
-        Random rnd = new();
-
-        var per1 = new Worker();
-        var per2 = new Engineer();
-        var per3 = new Administration();
-
-        per1.RandomInit(rnd);
-        per2.RandomInit(rnd);
-        per3.RandomInit(rnd);
-
-        list.AddRange(per1, per2, per3);
-
-        foreach (Person per in list)
-        {
-            per.Show();
-        }
-
-        Console.WriteLine("\n");
     }
 
     static void InitDList(MyDoublyLinkedList<Person> list)
@@ -257,7 +231,7 @@ class Program
 
     static void ShallowCopyTest(MyDoublyLinkedList<Person> list)
     {
-        var shallowCopy = list.ShallowCopy();
+        MyDoublyLinkedList<Person> shallowCopy = list.ShallowCopy();
         Console.WriteLine("поверхностная копия, меянем всем возраст");
 
         if (list.Count > 0)
@@ -277,7 +251,7 @@ class Program
 
     static void DeepCopyTest(MyDoublyLinkedList<Person> list)
     {
-        var deepCopy = list.DeepCopy();
+        MyDoublyLinkedList<Person> deepCopy = list.DeepCopy();
         Console.WriteLine("глубокая копия, меняем всем возраст");
         if (list.Count > 0)
         {
@@ -311,7 +285,7 @@ class Program
         c1.CollectionCountChanged += j1.Handler;
         c1.CollectionReferenceChanged += j1.Handler;
 
-        c1.CollectionReferenceChanged += j2.Handler;
+        c2.CollectionCountChanged += j2.Handler;
         c2.CollectionReferenceChanged += j2.Handler;
 
         // генерация
@@ -352,10 +326,7 @@ class Program
         Console.WriteLine("LINQ TO OBJECTS DEMONSTRATION PROGRAM");
         Console.WriteLine("======================================\n");
 
-        // =====================================================
         // WHERE
-        // =====================================================
-
         Console.WriteLine("1. WHERE (Query Syntax)\n");
 
         var engineersQuery = service.Where_Query_Administation();
@@ -374,10 +345,7 @@ class Program
             Console.WriteLine(person);
         }
 
-        // =====================================================
         // UNION
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("2. UNION");
         Console.WriteLine("======================================\n");
@@ -389,10 +357,7 @@ class Program
             Console.WriteLine(person);
         }
 
-        // =====================================================
         // EXCEPT
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("3. EXCEPT");
         Console.WriteLine("======================================\n");
@@ -404,10 +369,7 @@ class Program
             Console.WriteLine(person);
         }
 
-        // =====================================================
         // INTERSECT
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("4. INTERSECT");
         Console.WriteLine("======================================\n");
@@ -419,10 +381,7 @@ class Program
             Console.WriteLine(person);
         }
 
-        // =====================================================
         // AGGREGATION
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("5. AGGREGATION");
         Console.WriteLine("======================================\n");
@@ -432,10 +391,7 @@ class Program
         Console.WriteLine($"Min Age: {service.MinAge()}");
         Console.WriteLine($"Average Age: {service.AverageAge():F2}");
 
-        // =====================================================
         // GROUP BY
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("6. GROUP BY");
         Console.WriteLine("======================================\n");
@@ -454,10 +410,8 @@ class Program
             Console.WriteLine();
         }
 
-        // =====================================================
-        // LET
-        // =====================================================
 
+        // LET
         Console.WriteLine("\n======================================");
         Console.WriteLine("7. LET");
         Console.WriteLine("======================================\n");
@@ -473,10 +427,7 @@ class Program
             );
         }
 
-        // =====================================================
         // JOIN
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("8. JOIN");
         Console.WriteLine("======================================\n");
@@ -492,10 +443,7 @@ class Program
             );
         }
 
-        // =====================================================
         // PERFORMANCE TEST
-        // =====================================================
-
         Console.WriteLine("\n======================================");
         Console.WriteLine("9. PERFORMANCE TEST");
         Console.WriteLine("======================================\n");

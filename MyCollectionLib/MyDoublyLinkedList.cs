@@ -104,7 +104,7 @@ namespace MyCollectionLib
 
             while (current != null)
             {
-                copy.Add(current.Data);
+                copy.Add((T)current.Data.Clone());
                 current = current.Next;
             }
 
@@ -171,7 +171,7 @@ namespace MyCollectionLib
 
             while (current != null)
             {
-                if (current.Data.Name == name)
+                if (current.Data.Name.Contains(name))
                     return current.Data;
 
                 current = current.Next;

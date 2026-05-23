@@ -42,7 +42,7 @@ namespace WorkersLib.Models
             Level = Console.ReadLine();
         }
 
-        public override object Clone()
+        public override Engineer Clone()
         {
             return new Engineer(this);
         }

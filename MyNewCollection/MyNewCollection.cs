@@ -9,7 +9,7 @@ using WorkersLib.Models;
 namespace MyNewCollectionLib
 {
     public delegate void CollectionHandler(object source, CollectionHandlerEventArgs args);
-    public class MyNewCollection<T> : MyLinkedList<T> where T : Person
+    public class MyNewCollection<T> : MyDoublyLinkedList<T> where T : Person
     {
         public string Name { get; set; } = "";
 

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WorkersLib.Models.Administration">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="WorkersLib.Models.Engineer" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="2.186" />
+        <Point X="5.75" Y="2.186" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAgAAAAAAAEAAEAAAAAAACAAAAABA=</HashCode>
+      <FileName>Models\Administration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersLib.Models.Person">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAQAQEgEAAAAQAAAAEAAAAAAACABAAABA=</HashCode>
+      <FileName>Models\Person.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WorkersLib.Models.Worker">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACIAAACgAAAEgAAAAAAAAAAEAAAAAABCAAAAQBA=</HashCode>
+      <FileName>Models\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersLib.Models.Engineer">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="WorkersLib.Models.Worker" ManuallyRouted="true">
+      <Path>
+        <Point X="3.75" Y="1.977" />
+        <Point X="4" Y="1.977" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAEAAABAAACAAAAABA=</HashCode>
+      <FileName>Models\Engineer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkersLib.Models.Equipment">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAEAAAAAAQAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Models\Equipment.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WorkersLib.Comparers.SalaryComparer">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Comparers\SalaryComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

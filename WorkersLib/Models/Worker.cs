@@ -80,7 +80,7 @@ namespace WorkersLib.Models
             return obj is Worker w && base.Equals(w) && Salary == w.Salary;
         }
 
-        public override object Clone()
+        public override Worker Clone()
         {
             return new Worker(this);
         }
